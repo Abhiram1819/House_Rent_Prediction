@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Predictor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="predictor.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <h4 class="logo"><a href="index.html">Predict.com</a></h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Predictor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+        <div>
+            <form>
+                <div class="form">
+                    <h3 style="font-family: 'Josefin Sans', sans-serif; font-size: 30px;">Predict your Rent</h3>
+                    <h2>Locality</h2>
+                    <select class="location" id="locations">
+                        <option selected>Choose a Location</option>
+                        <option>Electronic City</option>
+                        <option>Rajaji Nagar</option>
+                    </select><br>
+                    <h2>Bathrooms</h2>
+                    <input type="text" placeholder="Enter Bathrooms" id="bathrooms">
+                    <h2>Floor</h2>
+                    <input type="text" placeholder="Enter Floor Number" id="floor">
+                    <h2>Parking</h2>
+                    <select class="location" id="parking">
+                        <option selected>Choose Parking Type</option>
+                        <option value="0">No Parking</option>
+                        <option value="1">Two Wheeler Parking Only</option>
+                        <option value="2">Four Wheeler Parking Only</option>
+                        <option value="3">Both Two & Four Wheeler Parking</option>
+                    </select><br>
+                    <h2>Property Size (In Sqft)</h2>
+                    <input type="text" placeholder="Enter Property Size" id="size">
+                    <h2>Bedrooms</h2>
+                    <input type="text" placeholder="Enter Bedrooms" id="bedrooms">
+                    <h2>Maintenance</h2>
+                    <input type="text" placeholder="Enter Maintenance" id="maintenance"> <br>
+                    <div class="btn-new">
+                        <button onclick="onClickedEstimatePrice()" type="button" class="btn">Predict</button>
+                        <button type="reset" class="btn">Reset</button>
+                    </div>
+                    
+                    <div id="predict_rent" class="result">
+                        <h2></h2>
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
